@@ -1,0 +1,2 @@
+python-pptx>=1.0.0
+# python-pptx is pure Python; no native dependencies beyond Python 3.7+

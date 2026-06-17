@@ -1,0 +1,7 @@
+# Blue Theme — Professional / Tech / Finance
+primary: [0x1A, 0x3A, 0x5C]   # Deep navy
+accent: [0x47, 0x89, 0xDB]     # Bright blue
+bg: [0xF0, 0xF4, 0xF8]         # Light blue-gray
+text: [0x2C, 0x3E, 0x50]       # Dark gray-blue
+text_light: [0x7F, 0x8C, 0x8D]  # Muted gray
+dark_bg: [0x1A, 0x3A, 0x5C]    # Same as primary for dark slides

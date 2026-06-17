@@ -1,0 +1,8 @@
+node_modules/
+*.pptx
+/outline.json
+__pycache__/
+*.pyc
+.env
+*.log
+.DS_Store

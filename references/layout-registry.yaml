@@ -1,0 +1,148 @@
+# PPT Master Layout Registry
+# 每种版式的选型规则、适用场景、填充槽位定义
+
+layouts:
+  - id: cover
+    name: 封面页
+    when: "第一页。展示标题、副标题、作者/公司。深色大底+居中标题。"
+    max_per_presentation: 1
+    position: first
+    slots:
+      - title       # 主标题
+      - subtitle    # 副标题/标语
+      - author      # 演讲人
+      - company     # 公司/团队
+
+  - id: section-divider
+    name: 章节分隔页
+    when: "每章开头的过渡页。深色全底+大号章节编号+标题。用于视觉节奏分隔。"
+    position: chapter_start
+    slots:
+      - number      # 章节编号（01, 02...）
+      - title       # 章节标题
+
+  - id: text-only
+    name: 纯文段页
+    when: "需要用连贯文字解释概念性内容：背景介绍、问题定义、方案说明等。"
+    slots:
+      - title       # 页标题
+      - paragraphs  # 段落列表
+
+  - id: text-image
+    name: 左文右图
+    when: "文字描述为主，配合说明性图片。文字解释概念，图片辅助理解。"
+    slots:
+      - title       # 页标题
+      - text        # 左侧文字
+      - image_path  # 图片路径（可选，留空显示占位）
+
+  - id: two-column
+    name: 双栏对比
+    when: "需要并列展示两个方案、产品、数据的对比或并列关系。"
+    slots:
+      - title       # 页标题
+      - columns     # 双栏 [{title, text}]
+
+  - id: three-column
+    name: 三栏展示
+    when: "展示三个并列特性、功能点、步骤或案例。"
+    slots:
+      - title       # 页标题
+      - columns     # 三栏 [{title, text}]
+
+  - id: data-chart
+    name: 数据图表页
+    when: "需要展示数据趋势、对比、分布。支持柱状图、折线图、饼图。"
+    slots:
+      - title       # 页标题
+      - chart_type  # bar | line | pie
+      - labels      # 数据标签列表
+      - values      # 数据值列表
+
+  - id: data-table
+    name: 数据表格页
+    when: "展示结构化数据对比，例如竞品对比、功能矩阵、价格方案。"
+    slots:
+      - title       # 页标题
+      - table       # 表格数据（二维数组，第一行是表头）
+
+  - id: timeline
+    name: 时间线/里程碑
+    when: "展示发展历程、项目阶段、路线图。水平时间轴+关键节点。"
+    slots:
+      - title       # 页标题
+      - milestones  # [{date, title, description}]
+
+  - id: quote
+    name: 引用/金句页
+    when: "需要突出用户评价、核心价值观、核心理念。大号引用+出处。"
+    slots:
+      - quote        # 引用文字
+      - attribution  # 出处/作者
+
+  - id: list
+    name: 列表/要点页
+    when: "列举3-8个并列要点。适合创新点、功能列表、步骤指南。"
+    slots:
+      - title       # 页标题
+      - items       # [{title, description}]
+
+  - id: contact
+    name: 联系方式/CTA
+    when: "最后一页。感谢+联系方式+行动号召。深色底+居中。"
+    max_per_presentation: 1
+    position: last
+    slots:
+      - contact     # 联系方式信息
+      - cta         # 行动号召文字
+
+# =============================================================
+# 版式选型优先级规则
+# =============================================================
+selection_rules:
+  - "第一页必须是 cover"
+  - "最后一页必须是 contact"
+  - "每章第一页建议用 section-divider"
+  - "含有数据对比的内容优先用 data-table"
+  - "含有趋势分析的内容优先用 data-chart"
+  - "纯概念解释、背景叙述用 text-only"
+  - "功能特性介绍用 three-column 或 two-column"
+  - "展示历程/路线图用 timeline"
+  - "核心观点/客户评价用 quote"
+  - "并列要点用 list"
+  - "避免连续3页使用相同版式"
+  - "文图交替，保持节奏感"
+
+# =============================================================
+# PPT 类型差异
+# =============================================================
+presentation_types:
+  pitch:
+    typical_length: 8-12
+    vibe: "简洁有力，视觉效果强"
+    required: [cover, contact]
+    optional: [timeline, data-chart]
+
+  product_launch:
+    typical_length: 10-15
+    vibe: "产品亮点突出，图文并茂"
+    required: [cover, contact]
+    optional: [data-table, quote]
+
+  work_report:
+    typical_length: 10-20
+    vibe: "数据驱动，专业稳重"
+    required: [cover, data-chart, contact]
+    optional: [timeline, data-table]
+
+  annual_summary:
+    typical_length: 15-25
+    vibe: "回顾+展望，结果导向"
+    required: [cover, timeline, data-chart, contact]
+    optional: [list, quote]
+
+  company_intro:
+    typical_length: 10-15
+    vibe: "品牌调性，视觉统一"
+    required: [cover, contact]
+    optional: [timeline, two-column]

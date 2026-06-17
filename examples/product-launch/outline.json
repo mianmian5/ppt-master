@@ -1,0 +1,111 @@
+{
+  "presentation": {
+    "type": "product_launch",
+    "title": "AI 数据分析平台",
+    "author": "张三",
+    "company": "智数科技",
+    "theme": "blue",
+    "total_slides": 9,
+    "aspect_ratio": "16x9"
+  },
+  "slides": [
+    {
+      "id": 1,
+      "layout": "cover",
+      "title": "AI 数据分析平台",
+      "content": {
+        "subtitle": "让数据说话 · 让决策更准",
+        "author": "张三",
+        "company": "智数科技"
+      }
+    },
+    {
+      "id": 2,
+      "layout": "section-divider",
+      "title": "行业洞察",
+      "content": { "number": "01" }
+    },
+    {
+      "id": 3,
+      "layout": "text-only",
+      "title": "企业数据之痛",
+      "content": {
+        "paragraphs": [
+          "当前企业普遍面临数据分散、分析耗时的困境。90% 的企业数据分析依赖人工 Excel，平均每次分析耗时 3-5 个工作日。",
+          "同时，数据孤岛现象严重，CRM、ERP、电商平台之间的数据无法打通，导致决策滞后，错失市场机会。",
+          "AI 数据分析平台应运而生，通过自动化数据整合和智能分析，将分析周期从数天缩短至分钟级。"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "layout": "section-divider",
+      "title": "产品方案",
+      "content": { "number": "02" }
+    },
+    {
+      "id": 5,
+      "layout": "two-column",
+      "title": "核心功能对比",
+      "content": {
+        "columns": [
+          {
+            "title": "传统方案",
+            "text": "· 人工数据导出\n· Excel 手工分析\n· 静态报表\n· 响应需 3-5 天\n· 人力成本高"
+          },
+          {
+            "title": "AI 智能平台",
+            "text": "· 自动数据接入\n· AI 智能分析\n· 实时仪表盘\n· 分钟级响应\n· 成本降低 80%"
+          }
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "layout": "data-table",
+      "title": "竞品对比分析",
+      "content": {
+        "table": [
+          ["功能", "智数 AI", "竞品A", "竞品B"],
+          ["多数据源接入", "✓", "✓", "✗"],
+          ["AI 智能分析", "✓", "✗", "✗"],
+          ["实时仪表盘", "✓", "✓", "✓"],
+          ["自动报表生成", "✓", "✗", "✗"],
+          ["API 开放接口", "✓", "✓", "✗"],
+          ["私有化部署", "✓", "✗", "✗"]
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "layout": "data-chart",
+      "title": "效率提升数据",
+      "content": {
+        "chart_type": "bar",
+        "labels": ["传统方式", "竞品A", "智数 AI"],
+        "values": [120, 48, 5]
+      }
+    },
+    {
+      "id": 8,
+      "layout": "timeline",
+      "title": "产品路线图",
+      "content": {
+        "milestones": [
+          { "date": "2026 Q1", "title": "MVP 上线" },
+          { "date": "2026 Q2", "title": "AI 分析引擎" },
+          { "date": "2026 Q3", "title": "企业版发布" },
+          { "date": "2026 Q4", "title": "国际化" }
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "layout": "contact",
+      "title": "联系方式",
+      "content": {
+        "contact": "张三 · CEO\n📧 zhang@zhishu-ai.com\n📱 138-0000-0000\n🌐 www.zhishu-ai.com"
+      }
+    }
+  ]
+}
