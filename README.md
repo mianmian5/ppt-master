@@ -18,6 +18,22 @@ AI Skill for [Claude Code](https://docs.anthropic.com/en/docs/claude-code) / [Co
 
 </div>
 
+<br>
+
+<div align="center">
+  <img src="docs/workflow.svg" width="90%" alt="PPT Master Workflow">
+</div>
+
+<br>
+
+---
+
+## 🎨 Gallery
+
+<div align="center">
+  <img src="docs/preview.svg" width="100%" alt="Slide Previews">
+</div>
+
 ---
 
 > [!TIP]
